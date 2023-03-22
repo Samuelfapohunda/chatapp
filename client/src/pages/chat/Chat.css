@@ -1,0 +1,135 @@
+:root {
+	--dark-color-a: #5cb85c;
+	--dark-color-b:#5cb85c;
+	--light-color: #e6e9ff;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+
+
+.chatContainer {    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    max-width: 1100px;
+	background: rgb(236, 235, 235);
+  }
+  
+  /* Room and users component */
+  .roomAndUsersColumn {
+    border-right: 1px solid #5cb85c ;
+    background-color: #5cb85c;
+    padding-left: 10px;
+  }
+
+  .roomTitle {
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .usersTitle {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .usersList {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 60px;
+    color: white
+  }
+  .usersList li {
+    margin-bottom: 12px;
+  }
+  
+  /* Messages */
+  .messagesColumn {
+    height: 85vh;
+    overflow: auto;
+    padding: 10px 10px 10px 40px;
+  }
+  .message {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--light-color);
+    border-radius: 15px;
+  }
+  .msgMeta {
+    font-size: 15px;
+    font-weight: bold;
+    color:black;
+    opacity: 0.7;
+    margin-bottom: 7px;
+  }
+  .msgText {
+    color: #fff;
+  }
+  
+  /* Message input and button */
+  .sendMessageContainer {
+    padding: 20px 30px;
+	background-color: var(--dark-color-a);
+  }
+  .messageInput {
+    padding: 14px;
+    margin-right: 16px;
+    width: 70%;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    border: 1px solid white;
+  }
+
+  .btn {
+    height: 50px;
+    width: 100px;
+    background-color:  black;
+    color: white;
+     border: 1px solid black;
+     border-radius: 10px;
+  }
+
+
+  @media (max-width: 700px) {
+    .btn {
+      width: 70px;
+    }
+  
+
+    .sendMessageContainer {
+      padding: 20px 30px;
+    background-color: var(--dark-color-a);
+    display: flex;
+    }
+    
+    .roomAndUsersColumn {
+      border-right: 1px solid #5cb85c ;
+      background-color: #5cb85c;
+      width: 140px;
+    }
+
+    .chatContainer {    margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      max-width: 1100px;
+    background: rgb(236, 235, 235);
+    height: 100%;
+    }
+
+    .roomAndUsersColumn {
+     display: none;
+    }
+
+    .messagesColumn {
+      height: 77vh;
+      width: 350px;
+      overflow: auto;
+      padding: 10px 10px 10px 40px;
+    }
+
+    .sendMessageContainer {
+      padding: 20px 30px;
+    background-color: var(--dark-color-a);
+    width: 375px;
+    }
+  }
